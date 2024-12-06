@@ -1,7 +1,13 @@
 package org.example;
 
+import jakarta.persistence.*;
+
+@MappedSuperclass
 public abstract class Shape {
-    private final Color color;
+    @Embedded
+    private Color color;
+
+    public Shape() {}
 
     public Shape(Color color) {
         this.color = color;
@@ -11,7 +17,7 @@ public abstract class Shape {
     public abstract double getPerimeter();
 
     public String getColorDescription() {
-        return "Red: " + color.red() + ", Green: " + color.green() + ", Blue: " + color.blue() + ", Alpha: " + color.alpha();
+        return "Red: " + color.getRed() + ", Green: " + color.getGreen() + ", Blue: " + color.getBlue() + ", Alpha: " + color.getAlpha();
     }
 
     public Color getColor() {

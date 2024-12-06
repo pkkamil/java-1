@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Color color1 = new Color(255, 0, 0);
@@ -15,5 +17,34 @@ public class Main {
         System.out.println(rectangle);
         System.out.println("Rectangle Area: " + rectangle.getArea());
         System.out.println("Rectangle Perimeter: " + rectangle.getPerimeter());
+
+        ShapeDAO shapeDAO = new ShapeDAO();
+
+        try {
+            // Save shapes to the database
+            shapeDAO.save(rectangle);
+            shapeDAO.save(triangle);
+
+            // Retrieve and describe all rectangles
+            System.out.println("All Rectangles:");
+            List<Rectangle> rectangles = shapeDAO.findAll(Rectangle.class);
+            for (Rectangle rect : rectangles) {
+                ShapeDescriber describer = new ShapeDescriber();
+                describer.describe(rect);
+            }
+
+            // Retrieve and describe all triangles
+            System.out.println("\nAll Triangles:");
+            List<Triangle> triangles = shapeDAO.findAll(Triangle.class);
+            for (Triangle tri : triangles) {
+                ShapeDescriber describer = new ShapeDescriber();
+                describer.describe(tri);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Close the DAO
+            shapeDAO.close();
+        }
     }
 }
