@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Rectangle extends Shape {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(nullable = false)
     private double width;

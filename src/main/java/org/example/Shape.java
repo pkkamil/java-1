@@ -4,6 +4,10 @@ import jakarta.persistence.*;
 
 @MappedSuperclass
 public abstract class Shape {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @Embedded
     private Color color;
 
