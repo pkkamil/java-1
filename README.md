@@ -14,6 +14,8 @@ Output of the ShapeDescriber class:<br><br>
 ![image](https://github.com/user-attachments/assets/67623373-7f06-410f-98d5-95b2c02767fd)
 
 ## Laboratory 4: Java Hibernate
+<b>Instead of implementing one Shape table, I decided to split it into two tables: Rectangles and Triangles.</b>
+
 Unit tests - coverage:<br><br>
 ![image](https://github.com/user-attachments/assets/79e272c0-c2f8-47c9-9822-e256d4e747e8)
 
@@ -35,5 +37,21 @@ Hibernate debug logs:<br><br>
 
 ![image](https://github.com/user-attachments/assets/2a643cb2-a2b7-4d71-a2cc-f3ee07ea5e28)
 ![image](https://github.com/user-attachments/assets/e43524af-9eac-40ca-8e2d-b4039ded9533)
+
+## Laboratory 5: Java Spring
+<b>In this lab we have 2 controllers (RectangleController and TriangleController) instead of 1 (ShapeController).</b>
+
+![image](https://github.com/user-attachments/assets/af7604d9-ecd1-4c41-84f7-92338ca0658f)
+![image](https://github.com/user-attachments/assets/ea4917eb-a67a-48fa-8541-1c9fefed0c6a)
+
+![image](https://github.com/user-attachments/assets/1f62301b-9d3b-4b04-af29-94e6d2ae12f6)
+![image](https://github.com/user-attachments/assets/fe2ea839-87b3-47d0-92a0-2ee5323b0a18)
+
+![image](https://github.com/user-attachments/assets/9eea4068-661c-403c-acf3-fdc411cd6b24)
+
+
+
+
+
 
 
